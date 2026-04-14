@@ -14,8 +14,8 @@ interface CaseStudy {
 
 const caseStudies: CaseStudy[] = [
   {
-    id: "notion",
-    company: "ТехноСофт",
+    id: "mgu",
+    company: "МГУ им. Ломоносова",
     logo: (
       <svg fill="none" height="48" viewBox="0 0 38 48" width="38" xmlns="http://www.w3.org/2000/svg">
         <path
@@ -24,15 +24,15 @@ const caseStudies: CaseStudy[] = [
         />
       </svg>
     ),
-    title: "ТехноСофт использует СинхроЛинк для понимания взаимодействия команд в реальном времени.",
-    features: ["Звонки в Slack", "Транскрипции встреч", "Отчеты о настроениях"],
-    quote: "СинхроЛинк дает нам ясность в синхронизации команды, которой раньше не было.",
-    attribution: "Мария Иванова, Руководитель операций, ТехноСофт",
+    title: "МГУ использует Дневник для перевода всего учебного документооборота в цифровой формат.",
+    features: ["Расписание занятий", "Электронные оценки", "Уведомления о дедлайнах"],
+    quote: "Дневник сократил время на административную работу преподавателей в 3 раза.",
+    attribution: "Алексей Морозов, Проректор по цифровизации, МГУ",
     accentColor: "#16b364",
   },
   {
-    id: "cloudwatch",
-    company: "ДатаВью",
+    id: "spbgu",
+    company: "СПбГУ",
     logo: (
       <svg fill="none" height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg">
         <rect fill="url(#gradient1)" height="48" rx="12" width="48" />
@@ -46,30 +46,30 @@ const caseStudies: CaseStudy[] = [
         </defs>
       </svg>
     ),
-    title: "ДатаВью использует СинхроЛинк для мониторинга динамики команд в глобальных офисах.",
-    features: ["Звонки в Slack", "Транскрипции встреч", "Отчеты о настроениях"],
-    quote: "С СинхроЛинк мы видим паттерны взаимодействия, которые напрямую влияют на скорость разработки.",
-    attribution: "Сергей Петров, VP Engineering, ДатаВью",
+    title: "СПбГУ подключил Дневник для 15 000 студентов — успеваемость выросла на 18%.",
+    features: ["Расписание занятий", "Электронные оценки", "Уведомления о дедлайнах"],
+    quote: "Студенты перестали пропускать сдачи работ — все уведомления приходят вовремя.",
+    attribution: "Ирина Соколова, Декан факультета, СПбГУ",
     accentColor: "#3b82f6",
   },
   {
-    id: "eightball",
-    company: "СинергиЯ",
+    id: "hse",
+    company: "ВШЭ",
     logo: (
       <svg fill="none" height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg">
         <circle cx="24" cy="24" r="20" fill="#0A0D12" />
         <circle cx="28" cy="20" r="8" fill="white" />
       </svg>
     ),
-    title: "СинергиЯ полагается на СинхроЛинк для отслеживания здоровья команды и качества асинхронной коммуникации.",
-    features: ["Звонки в Slack", "Отчеты о настроениях"],
-    quote: "СинхроЛинк изменил наше понимание культуры удаленной работы.",
-    attribution: "Анна Смирнова, Сооснователь, СинергиЯ",
+    title: "ВШЭ внедрила Дневник для синхронизации расписания между кампусами в 4 городах.",
+    features: ["Расписание занятий", "Уведомления о дедлайнах"],
+    quote: "Приложение объединило всех студентов в единую систему — это настоящий прорыв.",
+    attribution: "Дмитрий Волков, IT-директор, ВШЭ",
     accentColor: "#0A0D12",
   },
   {
-    id: "coreos",
-    company: "КорСистемс",
+    id: "itmo",
+    company: "ИТМО",
     logo: (
       <svg fill="none" height="48" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg">
         <rect fill="#101828" height="48" rx="12" width="48" />
@@ -77,37 +77,35 @@ const caseStudies: CaseStudy[] = [
         <path d="M20 20h8v8h-8z" fill="white" />
       </svg>
     ),
-    title: "КорСистемс использует СинхроЛинк для синхронизации дизайн и инженерных команд во время спринтов.",
-    features: ["Транскрипции встреч", "Отчеты о настроениях"],
-    quote: "Анализ настроений помогает выявить точки напряжения до того, как они станут блокерами.",
-    attribution: "Николай Козлов, VP Engineering, КорСистемс",
+    title: "ИТМО использует Дневник для управления проектными заданиями и командной работой студентов.",
+    features: ["Электронные оценки", "Уведомления о дедлайнах"],
+    quote: "Студенты сдают проекты вовремя — это прямо влияет на качество образования.",
+    attribution: "Павел Кузнецов, Проректор по учебной работе, ИТМО",
     accentColor: "#155eef",
   },
 ];
 
 const FeatureBadge = ({ name }: { name: string }) => {
   const getIcon = (featureName: string) => {
-    if (featureName.includes("Slack")) {
+    if (featureName.includes("Расписание")) {
       return (
         <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 opacity-50">
-          <path d="M6 2C6 1.44772 5.55228 1 5 1C4.44772 1 4 1.44772 4 2V6C4 6.55228 4.44772 7 5 7C5.55228 7 6 6.55228 6 6V2Z" fill="#E01E5A" />
-          <path d="M10 6C10.5523 6 11 5.55228 11 5C11 4.44772 10.5523 4 10 4H6V6H10Z" fill="#36C5F0" />
-          <path d="M14 5C14 4.44772 13.5523 4 13 4C12.4477 4 12 4.44772 12 5V9C12 9.55228 12.4477 10 13 10C13.5523 10 14 9.55228 14 9V5Z" fill="#2EB67D" />
-          <path d="M6 10C5.44772 10 5 10.4477 5 11C5 11.5523 5.44772 12 6 12H10V10H6Z" fill="#ECB22E" />
+          <rect x="2" y="3" width="12" height="11" rx="1.5" stroke="#156d95" strokeWidth="1.5" />
+          <path d="M5 2V4M11 2V4M2 7H14" stroke="#156d95" strokeWidth="1.5" strokeLinecap="round" />
         </svg>
       );
-    } else if (featureName.includes("встреч") || featureName.includes("Транскрипции")) {
+    } else if (featureName.includes("оценки") || featureName.includes("Электронные")) {
       return (
         <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 opacity-50">
-          <path d="M2 4C2 3.44772 2.44772 3 3 3H9C9.55228 3 10 3.44772 10 4V10C10 10.5523 9.55228 11 9 11H3C2.44772 11 2 10.5523 2 10V4Z" stroke="#5E6AD2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M10 5L13 3V11L10 9" stroke="#5E6AD2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M3 4C3 3.44772 3.44772 3 4 3H12C12.5523 3 13 3.44772 13 4V12C13 12.5523 12.5523 13 12 13H4C3.44772 13 3 12.5523 3 12V4Z" stroke="#5E6AD2" strokeWidth="1.5" />
+          <path d="M6 8L8 10L11 6" stroke="#5E6AD2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       );
-    } else if (featureName.includes("настроен") || featureName.includes("Отчеты")) {
+    } else if (featureName.includes("Уведомления") || featureName.includes("дедлайн")) {
       return (
         <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 opacity-50">
-          <path d="M3 9L5 11L8 8L13 13" stroke="#10B981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M3 5H13M3 5V13M13 5V13M3 13H13" stroke="#10B981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M8 2C5.79086 2 4 3.79086 4 6V10L2.5 11.5H13.5L12 10V6C12 3.79086 10.2091 2 8 2Z" stroke="#10B981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M6.5 12C6.5 12.8284 7.17157 13.5 8 13.5C8.82843 13.5 9.5 12.8284 9.5 12" stroke="#10B981" strokeWidth="1.5" strokeLinecap="round" />
         </svg>
       );
     }
@@ -139,35 +137,35 @@ const NotionCollaborationCard = ({ delay, zIndex }: { accentColor: string; delay
     >
       <div className="flex flex-col space-y-5">
         <div className="flex items-center justify-between">
-          <h4 className="text-sm font-semibold text-foreground">Синхронизация команды</h4>
-          <span className="text-xs text-muted-foreground">В реальном времени</span>
+          <h4 className="text-sm font-semibold text-foreground">Успеваемость факультета</h4>
+          <span className="text-xs text-muted-foreground">Текущий семестр</span>
         </div>
         <div className="space-y-4">
           <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-green-500" />
-              <span className="text-sm text-foreground">Дизайн-команда</span>
+              <span className="text-sm text-foreground">Сданы вовремя</span>
             </div>
-            <span className="text-sm font-semibold text-green-600">96%</span>
+            <span className="text-sm font-semibold text-green-600">94%</span>
           </div>
           <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-blue-500" />
-              <span className="text-sm text-foreground">Разработка</span>
+              <span className="text-sm text-foreground">Средний балл</span>
             </div>
-            <span className="text-sm font-semibold text-blue-600">94%</span>
+            <span className="text-sm font-semibold text-blue-600">4.3</span>
           </div>
           <div className="flex items-center justify-between p-3 bg-muted/30 rounded-lg">
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-purple-500" />
-              <span className="text-sm text-foreground">Продукт</span>
+              <span className="text-sm text-foreground">Посещаемость</span>
             </div>
-            <span className="text-sm font-semibold text-purple-600">92%</span>
+            <span className="text-sm font-semibold text-purple-600">89%</span>
           </div>
         </div>
         <div className="pt-3 border-t border-border/50">
           <div className="text-xs text-muted-foreground">
-            <span className="font-semibold text-foreground">12</span> активных диалогов
+            <span className="font-semibold text-foreground">348</span> активных студентов
           </div>
         </div>
       </div>
@@ -192,33 +190,33 @@ const StripeGlobalCard = ({ accentColor, delay, zIndex }: { accentColor: string;
     >
       <div className="flex flex-col space-y-5">
         <div className="flex items-center justify-between">
-          <h4 className="text-sm font-semibold text-foreground">Динамика глобальной команды</h4>
-          <span className="text-xs text-muted-foreground">За 24 часа</span>
+          <h4 className="text-sm font-semibold text-foreground">Ближайшие дедлайны</h4>
+          <span className="text-xs text-muted-foreground">Эта неделя</span>
         </div>
         <div className="grid grid-cols-3 gap-3">
           <div className="text-center p-3 bg-muted/20 rounded-lg">
-            <div className="text-2xl font-bold text-foreground">МСК</div>
-            <div className="text-xs text-muted-foreground mt-1">Москва</div>
-            <div className="text-xs font-semibold text-green-600 mt-2">Высокая</div>
+            <div className="text-2xl font-bold text-foreground">3</div>
+            <div className="text-xs text-muted-foreground mt-1">Сегодня</div>
+            <div className="text-xs font-semibold text-green-600 mt-2">Сдано</div>
           </div>
           <div className="text-center p-3 bg-muted/20 rounded-lg">
-            <div className="text-2xl font-bold text-foreground">СПБ</div>
-            <div className="text-xs text-muted-foreground mt-1">Петербург</div>
-            <div className="text-xs font-semibold text-blue-600 mt-2">Активная</div>
+            <div className="text-2xl font-bold text-foreground">2</div>
+            <div className="text-xs text-muted-foreground mt-1">Завтра</div>
+            <div className="text-xs font-semibold text-blue-600 mt-2">В работе</div>
           </div>
           <div className="text-center p-3 bg-muted/20 rounded-lg">
-            <div className="text-2xl font-bold text-foreground">НСК</div>
-            <div className="text-xs text-muted-foreground mt-1">Новосибирск</div>
-            <div className="text-xs font-semibold text-purple-600 mt-2">Пик</div>
+            <div className="text-2xl font-bold text-foreground">5</div>
+            <div className="text-xs text-muted-foreground mt-1">На неделе</div>
+            <div className="text-xs font-semibold text-purple-600 mt-2">Планирую</div>
           </div>
         </div>
         <div className="space-y-2">
           <div className="flex items-center justify-between text-sm">
-            <span className="text-muted-foreground">Кросс-офисная скорость</span>
-            <span className="font-semibold text-foreground">+28%</span>
+            <span className="text-muted-foreground">Выполнено в срок</span>
+            <span className="font-semibold text-foreground">94%</span>
           </div>
           <div className="w-full h-2 bg-muted rounded-full overflow-hidden">
-            <div className="h-full rounded-full" style={{ width: "87%", backgroundColor: accentColor }} />
+            <div className="h-full rounded-full" style={{ width: "94%", backgroundColor: accentColor }} />
           </div>
         </div>
       </div>
@@ -253,41 +251,41 @@ const FigmaSprintCard = ({ accentColor, delay, zIndex }: { accentColor: string; 
               </svg>
             </div>
             <div>
-              <h4 className="text-sm font-semibold text-foreground">Планирование спринта</h4>
-              <p className="text-xs text-muted-foreground">Неделя 3, День 2</p>
+              <h4 className="text-sm font-semibold text-foreground">Успеваемость по предметам</h4>
+              <p className="text-xs text-muted-foreground">Текущий семестр</p>
             </div>
           </div>
         </div>
         <div className="space-y-3">
           <div className="flex items-center justify-between p-3 bg-muted/20 rounded-lg">
-            <span className="text-sm text-foreground">Качество передачи дизайна</span>
+            <span className="text-sm text-foreground">Математический анализ</span>
             <div className="flex items-center gap-2">
               <div className="w-16 h-1.5 bg-muted rounded-full overflow-hidden">
-                <div className="h-full bg-green-500" style={{ width: "94%" }} />
+                <div className="h-full bg-green-500" style={{ width: "90%" }} />
               </div>
-              <span className="text-xs font-semibold text-foreground">94%</span>
+              <span className="text-xs font-semibold text-foreground">4.5</span>
             </div>
           </div>
           <div className="flex items-center justify-between p-3 bg-muted/20 rounded-lg">
-            <span className="text-sm text-foreground">Настроение команды</span>
+            <span className="text-sm text-foreground">Программирование</span>
             <div className="flex items-center gap-2">
               <div className="w-16 h-1.5 bg-muted rounded-full overflow-hidden">
-                <div className="h-full bg-blue-500" style={{ width: "89%" }} />
+                <div className="h-full bg-blue-500" style={{ width: "96%" }} />
               </div>
-              <span className="text-xs font-semibold text-foreground">89%</span>
+              <span className="text-xs font-semibold text-foreground">4.8</span>
             </div>
           </div>
           <div className="flex items-center justify-between p-3 bg-muted/20 rounded-lg">
-            <span className="text-sm text-foreground">Обнаружение конфликтов</span>
+            <span className="text-sm text-foreground">Пропусков занятий</span>
             <div className="flex items-center gap-2">
-              <span className="text-xs font-semibold text-green-600">Низкое</span>
+              <span className="text-xs font-semibold text-green-600">Нет</span>
             </div>
           </div>
         </div>
         <div className="pt-3 border-t border-border/50">
           <div className="flex items-center justify-between text-xs">
-            <span className="text-muted-foreground">Выявленных блокеров</span>
-            <span className="font-semibold text-foreground">2</span>
+            <span className="text-muted-foreground">Средний балл GPA</span>
+            <span className="font-semibold text-foreground">4.6</span>
           </div>
         </div>
       </div>
@@ -355,10 +353,10 @@ export const CaseStudiesCarousel = () => {
       <div className="max-w-7xl w-full">
         <div className="text-center mb-16">
           <h1 className="text-[40px] leading-tight font-normal text-foreground mb-6 tracking-tight">
-            Истории успеха клиентов
+            Что говорят университеты
           </h1>
           <p className="text-lg leading-7 text-muted-foreground max-w-2xl mx-auto">
-            Узнайте, как ведущие команды используют СинхроЛинк для понимания взаимодействия и синхронизации.
+            Узнайте, как ведущие российские вузы используют Дневник для повышения успеваемости и вовлечённости студентов.
           </p>
         </div>
 

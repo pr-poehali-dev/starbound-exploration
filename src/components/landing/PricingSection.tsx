@@ -20,37 +20,35 @@ interface PricingPlan {
 }
 
 const features: PricingFeature[] = [
-  { name: "Анализ разговоров в реальном времени", included: "starter" },
-  { name: "До 10 000 сообщений/месяц", included: "starter" },
-  { name: "Базовое определение тональности", included: "starter" },
+  { name: "Расписание занятий", included: "all" },
+  { name: "Просмотр оценок", included: "all" },
+  { name: "Уведомления о дедлайнах", included: "all" },
   { name: "Поддержка по email", included: "starter" },
-  { name: "Продвинутый эмоциональный интеллект", included: "pro" },
-  { name: "До 100 000 сообщений/месяц", included: "pro" },
-  { name: "Мультиязычная поддержка (50+ языков)", included: "pro" },
+  { name: "Синхронизация с LMS вуза", included: "pro" },
+  { name: "Умные напоминания с AI", included: "pro" },
+  { name: "Аналитика успеваемости", included: "pro" },
   { name: "Приоритетная поддержка", included: "pro" },
-  { name: "Кастомное обучение AI модели", included: "enterprise" },
-  { name: "Безлимитные сообщения", included: "enterprise" },
+  { name: "Корпоративный портал для вуза", included: "enterprise" },
+  { name: "Выгрузка отчётов деканату", included: "enterprise" },
   { name: "Персональный менеджер", included: "enterprise" },
-  { name: "Поддержка 24/7 по телефону", included: "enterprise" },
-  { name: "Доступ к API", included: "all" },
-  { name: "Инструменты командной работы", included: "all" },
+  { name: "Интеграция с 1С и ERP системами", included: "enterprise" },
 ];
 
 const plans: PricingPlan[] = [
   {
-    name: "Старт",
-    price: { monthly: 2900, yearly: 29000 },
+    name: "Студент",
+    price: { monthly: 0, yearly: 0 },
     level: "starter",
   },
   {
-    name: "Про",
-    price: { monthly: 9900, yearly: 99000 },
+    name: "Студент+",
+    price: { monthly: 299, yearly: 2990 },
     level: "pro",
     popular: true,
   },
   {
-    name: "Бизнес",
-    price: { monthly: 29900, yearly: 299000 },
+    name: "Для вуза",
+    price: { monthly: 9900, yearly: 99000 },
     level: "enterprise",
   },
 ];
@@ -73,7 +71,7 @@ export function PricingSection() {
         <div className="text-center mb-16">
           <h2 className="text-[40px] font-normal leading-tight mb-4">Выберите тариф</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Начните работу с платформой коммуникационной аналитики СинхроЛинк. Все тарифы включают API доступ и инструменты командной работы.
+            Для студентов — бесплатно. Для тех, кто хочет больше — расширенные возможности от 299 ₽/мес. Для вузов — корпоративные решения.
           </p>
         </div>
 

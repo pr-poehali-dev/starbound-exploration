@@ -26,33 +26,33 @@ interface FooterProps {
 
 const defaultSections: FooterSection[] = [
   {
-    title: "Продукт",
+    title: "Приложение",
     links: [
       { label: "Возможности", href: "#features" },
       { label: "Интеграции", href: "#integrations" },
       { label: "Тарифы", href: "#pricing" },
-      { label: "Документация API", href: "#api" },
-      { label: "Обновления", href: "#changelog" },
+      { label: "Скачать для iOS", href: "#ios" },
+      { label: "Скачать для Android", href: "#android" },
     ],
   },
   {
-    title: "Компания",
+    title: "Для вузов",
     links: [
-      { label: "О нас", href: "#about" },
-      { label: "Карьера", href: "#careers" },
-      { label: "Блог", href: "#blog" },
-      { label: "Пресс-кит", href: "#press" },
+      { label: "Подключить вуз", href: "#university" },
+      { label: "Корпоративный тариф", href: "#pricing" },
       { label: "Контакты", href: "#contact" },
+      { label: "Демо для деканата", href: "#demo" },
+      { label: "О нас", href: "#about" },
     ],
   },
   {
-    title: "Ресурсы",
+    title: "Поддержка",
     links: [
-      { label: "Документация", href: "#docs" },
       { label: "Центр помощи", href: "#help" },
+      { label: "FAQ", href: "#faq" },
       { label: "Сообщество", href: "#community" },
-      { label: "Кейсы", href: "#case-studies" },
-      { label: "Вебинары", href: "#webinars" },
+      { label: "Блог", href: "#blog" },
+      { label: "Обновления", href: "#changelog" },
     ],
   },
   {
@@ -60,22 +60,21 @@ const defaultSections: FooterSection[] = [
     links: [
       { label: "Политика конфиденциальности", href: "#privacy" },
       { label: "Условия использования", href: "#terms" },
-      { label: "Безопасность", href: "#security" },
-      { label: "Соответствие", href: "#compliance" },
+      { label: "152-ФЗ", href: "#privacy" },
       { label: "Политика cookies", href: "#cookies" },
     ],
   },
 ];
 
 export const Footer = ({
-  companyName = "СинхроЛинк",
-  tagline = "Интеллектуальный слой для современных коммуникаций",
+  companyName = "Дневник",
+  tagline = "Электронный дневник нового поколения для студентов",
   sections = defaultSections,
   socialLinks = {
     twitter: "https://twitter.com",
     telegram: "https://t.me",
     github: "https://github.com",
-    email: "hello@sinhrolink.ru",
+    email: "hello@dnevnik.app",
   },
   copyrightText,
 }: FooterProps) => {
